@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const SignIn = () => {
   const [session, setSession] = useState(null);
   const navigate = useNavigate();
+
   const signOut = async () => {
     await supabase.auth.signOut();
     setSession(null);
@@ -20,7 +21,7 @@ const SignIn = () => {
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
       if (session) {
-        navigate("/todo");
+        navigate("/");
       }
     });
     return () => subscription.unsubscribe();

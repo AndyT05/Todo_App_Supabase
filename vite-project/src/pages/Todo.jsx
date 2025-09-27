@@ -61,7 +61,7 @@ const Todo = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-[600px] w-full mx-4 p-8 bg-white rounded-lg shadow-md">
+      <div className="max-w-[600px] w-full m-8 p-8 bg-white rounded-lg shadow-md">
         <h1 className="text-2xl font-bold mb-4">Todo List</h1>
         <div className="flex">
           <input
@@ -95,11 +95,11 @@ const Todo = () => {
               </div>
               <div className="flex flex-col items-end">
                 <button
-                  className=" mt-2  bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 active:bg-blue-700 transition duration-200"
+                  className="  w-full mt-2  bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 active:bg-blue-700 transition duration-200"
                   // onClick={() => toggleComplete(todo.id, todo.isCompleted)}
                   onClick={() => completeTask(todo.id, todo.isCompleted)}
                 >
-                  {todo.isCompleted ? "Mark Incomplete" : "Mark Complete"}
+                  {todo.isCompleted ? "Completed" : "Undo"}
                 </button>
                 <button
                   className=" mt-2  bg-red-500 text-white rounded-md px-4 py-2 hover:bg-red-600 active:bg-red-700 transition duration-200"
